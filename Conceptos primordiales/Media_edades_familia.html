@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA DE AÑO MUNDIAL FIFA</h1>
+<br>
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var totalEdades = 0;
+    var contador = 1;
+    var miembros = parseInt(prompt("ingrese el numero de miembros de la familia:"));
+
+    while (contador <= miembros) {
+        var edad = parseInt(prompt("ingrese la edad del familiar:"));
+        totalEdades = totalEdades + edad;
+        contador++;
+    }
+
+    mediaEdades = totalEdades / miembros;
+
+    imprimir("usted ingreso " + miembros + " familiares");
+    imprimir("y la media de edades de los familiares es: " + mediaEdades)
+
+</script>

@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA de advinacion</h1>
+<br>
+<script>
+  function saltarlinea() {
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  function imprimir(frase) {
+    document.write(frase);
+    saltarlinea();
+  }
+
+  function sorteo(n) {
+    return Math.round(Math.random() * (n + 1));
+  }
+
+  var n = parseInt(prompt("Ingrese un número: "));
+  var numeroPensado = sorteo(n);
+  var adivinar = parseInt(prompt("Ingrese un número entre 0 y " + n + ": "));
+
+  while (numeroPensado !== adivinar) {
+    if (adivinar > numeroPensado) {
+      alert("El número que ingresaste es mayor al número pensado.");
+    } else {
+      alert("El número que ingresaste es menor al número pensado.");
+    }
+    adivinar = parseInt(prompt("Ingrese otro número entre 0 y " + n + ": "));
+  }
+
+  imprimir("¡Acertaste! el numero pensado era el: " + numeroPensado);
+</script>

@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA DE AÑO MUNDIAL FIFA</h1>
+<br>
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var anioMundial = 1930;
+    var limite = parseInt(prompt("ingrese un año para saber cuantos mundiales hubo:"))
+    var contador = 0;
+    while (anioMundial <= limite) {
+        var contador = contador + 1;
+        imprimir("Hubo mundial de la FIFA en el año " + anioMundial);
+        anioMundial = anioMundial + 4;
+    }
+    imprimir("Hubo en total " + contador + " mundiales")
+
+</script>
